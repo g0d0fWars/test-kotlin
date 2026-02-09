@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: items-postgres
+    environment:
+      POSTGRES_DB: items_db
+      POSTGRES_USER: items_user
+      POSTGRES_PASSWORD: items_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
