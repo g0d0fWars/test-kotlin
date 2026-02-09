@@ -94,9 +94,6 @@ curl -X POST http://127.0.0.1:8080/api/items/export \
 
 Миграции расположены в `src/main/resources/db/migration/` и применяются автоматически при запуске приложения через Flyway.
 
-| V1**create_items_table.sql | Создание таблицы items с полями id и name |
-| V2**add_extra_columns.sql | Добавление полей extra_number (INTEGER) и extra_text (VARCHAR(500)) |
-
 Новые столбцы добавлены как nullable, поэтому существующие данные не теряются.
 
 ## Валидация
